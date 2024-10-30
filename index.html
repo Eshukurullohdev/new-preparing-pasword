@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <input type="text" id="result" />
+            <button class="copy-result" id="copy">Copy</button>
+        </div>
+        <div class="settings">
+            <div class="input-group">
+                <label>Password length (4-20)</label>
+                <input type="range" id="length" min="4" max="20" step="1" />
+                <span id="length-result">10</span>
+            </div>
+            <div class="input-group">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked />
+            </div>
+            <div class="input-group">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked />
+            </div>
+        </div>
+        <button class="generate-btn" id="generate">Generate</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

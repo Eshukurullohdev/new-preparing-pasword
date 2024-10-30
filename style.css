@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --teal: #06b6d4;
+    --blue: #3b82f6;
+    --lightgray: #cbd5e1;
+    --gradient: linear-gradient(to right, var(--teal), var(--blue));
+  }
+  body {
+    background-image: var(--gradient);
+    font-family: "Lexend", sans-serif;
+    accent-color: var(--blue);
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 390px;
+    margin: 5rem auto;
+    padding: 26px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  .result-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  #result {
+    flex: 1;
+    font-family: Monaco, mono;
+    background: #f4f4f4;
+  }
+  .copy-result {
+    background-image: var(--gradient);
+    border: none;
+    padding: 14px 18px;
+    color: white;
+    border-radius: 25px;
+    margin-left: 16px;
+    position: absolute;
+    right: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 50;
+    font-size: 0.8rem;
+  }
+  .copy-result:hover {
+    background: var(--blue);
+  }
+  input[type="text"] {
+    padding: 20px 24px;
+    border: 1px solid var(--lightgray);
+    border-radius: 50px;
+  }
+  input[type="range"] {
+    padding: 8px 10px;
+    background: #f8f8f8;
+    flex: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border: 1px solid var(--teal);
+    outline: none;
+  }
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+  .settings {
+    margin-top: 3rem;
+  }
+  .input-group {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .generate-btn {
+    background-image: var(--gradient);
+    padding: 14px 24px;
+    border: none;
+    font-weight: 600;
+    color: white;
+    display: block;
+    width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  .generate-btn:hover,
+  .copy-btn:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background: var(--blue);
+  }
+  .alert {
+    position: fixed;
+    top: 6px;
+    right: 6px;
+    padding: 10px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 20px;
+  }
